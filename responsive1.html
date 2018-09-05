@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="src/js/vender/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        function makeImgResponsive() {
+            var width = $(window).width();
+            var img = $('.img');
+            if (width <= 480) {
+                img.attr('src', 'src/img/480.png');
+            } else if (width <= 800) {
+                img.attr('src', 'src/img/800.png');
+            } else {
+                img.attr('src', 'src/img/160.png');
+            }
+        }
+
+        $(window).on('resize load', makeImgResponsive);
+    })
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .content {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .content .img {
+        display: block;
+        max-width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+    <!-- 当加载了最大图片后，浏览器将图片缓存，当屏幕变小后，浏览器认为大图片不会再消耗网络，所以图片仍然显示最大图片。 -->
+        <img class="img" src="src/img/1.jpeg"
+        srcset="src/img/1.jpeg 480w,src/img/2.jpeg 800w,src/img/3.jpeg 1600w"
+        sizes="(min-width=800px) 800px 100vw"></img>
+    </div>
+</body>
+
+</html>
